@@ -1,0 +1,8 @@
+# Secret scanning: gitleaks' default rules, plus known placeholders.
+# Run locally with `gitleaks git --redact .`; CI runs it on every push.
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Documented placeholders in .env.example"
+regexes = ['''replace-with-64-hex-characters''']

@@ -1,0 +1,30 @@
+{
+  "id": "sponsor-heavy",
+  "tags": [
+    "sponsor-heavy",
+    "full"
+  ],
+  "why": "Short dev newsletter with a sponsor block and three [sponsored] items mixed into the links; ads must not become bullets.",
+  "content_access": "full",
+  "max_bullets": 2,
+  "acceptable_urls": [
+    "https://bytes.dev/archives/540"
+  ],
+  "must_capture": [
+    "Solid 2.0 shipped and SolidStart is sunset (server functions move into the core and/or Solid's Vite plugin handles dev server, SSR and builds).",
+    "Development builds report errors with location and recommended fix, pointing agents to skills: observability for agents is now first-class.",
+    "Next bets: ReactiveScript (a language that compiles to Solid) and/or Reactive Server Components (HTML diffs instead of JSON)."
+  ],
+  "must_not_claim": [
+    "Sponsored content as news (Sentry's metrics workshop, Expo Simulators, Greptile, Blacksmith)."
+  ],
+  "acceptable_publications": [
+    "Bytes"
+  ],
+  "acceptable_authors": [
+    [],
+    [
+      "Tyler"
+    ]
+  ]
+}

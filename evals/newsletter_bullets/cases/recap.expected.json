@@ -1,0 +1,32 @@
+{
+  "id": "recap",
+  "tags": [
+    "recap",
+    "full"
+  ],
+  "why": "Weekly roundup pointing to stories published elsewhere; must surface the lead stories as pointers without inventing detail from the linked articles. The owner values the holiday gift guide, so a bullet on it counts as a legitimate item.",
+  "content_access": "full",
+  "max_bullets": 2,
+  "acceptable_urls": [
+    "https://mail.google.com/mail/u/0/#inbox/eval-recap"
+  ],
+  "must_capture": [
+    "Matt Belloni's story on a possible Netflix run at (bid for) NBCUniversal.",
+    "Ian Krietzberg's story on the odds of Jensen Huang's return to Nvidia.",
+    "At least one more item with the specifics the email gives: the Wachowskis reclaiming The Matrix; Christie's $627M evening sale; FIFA's World Cup rights auction falling flat; Ioffe puncturing the 'Yalta 2.0' hype around the Trump-Putin-Xi Shenzhen summit; or Puck's 2026 holiday gift guide (Mirth & Merriment) and its guest editors."
+  ],
+  "must_not_claim": [
+    "Any detail of a linked story that is in neither the email body nor its link list (e.g., a bid price for NBCUniversal, or the reasons FIFA's auction is struggling).",
+    "That Netflix has made or agreed to an offer for NBCUniversal (the email only says Belloni floated/eyed it).",
+    "Presents a linked story's findings as if this email reported them in depth; bullets should read as pointers to who covered what."
+  ],
+  "acceptable_publications": [
+    "Puck",
+    "The Backstory"
+  ],
+  "acceptable_authors": [
+    [
+      "Jon Kelly"
+    ]
+  ]
+}

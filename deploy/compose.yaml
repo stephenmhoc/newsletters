@@ -1,0 +1,61 @@
+services:
+  app:
+    build:
+      context: ./app
+      dockerfile: deploy/Dockerfile
+    image: newsletter-summary:local
+    container_name: newsletter-summary
+    restart: unless-stopped
+    command:
+    - serve
+    - --config
+    - /app/config.yaml
+    environment:
+      TZ: America/New_York
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY}
+      # Required: derives the secret feed URLs and signs image proxy URLs and CSRF tokens.
+      WEB_SECRET: ${WEB_SECRET:-}
+      FRESHRSS_REFRESH_URL: ${FRESHRSS_REFRESH_URL:-}
+      GOOGLE_APPLICATION_CREDENTIALS: /secrets/adc.json
+      DATABASE_URL_FILE: /run/secrets/database-url
+    volumes:
+    - ./var:/app/var
+    - ./config.vm.yaml:/app/config.yaml:ro
+    - ./secrets/adc.json:/secrets/adc.json:ro
+    - /opt/homelab-data/secrets/newsletter-url:/run/secrets/database-url:ro
+    ports:
+    - 127.0.0.1:18791:18791
+    # Private web UI; Cloudflare Tunnel -> newsletters.merimerimeri.com (Access).
+    - 127.0.0.1:18792:18792
+    labels:
+      ofelia.enabled: 'true'
+      # Hourly ingest. A day's digest is published by the run that closes its
+      # window (rss.digest_hour: 19), so the 7 PM run still publishes it.
+      ofelia.job-exec.newsletter-summary.schedule: 0 0 * * * *
+      ofelia.job-exec.newsletter-summary.command: uv run --frozen --no-dev newsletter-summary
+        run --config /app/config.yaml
+      ofelia.job-exec.newsletter-summary.no-overlap: 'true'
+    healthcheck:
+      test:
+      - CMD
+      - /app/.venv/bin/newsletter-summary
+      - health
+      - --config
+      - /app/config.yaml
+      # Runs are hourly; three hours without a success is a real outage.
+      - --max-age-hours
+      - '3'
+      interval: 5m
+      timeout: 15s
+      retries: 2
+      start_period: 5m
+    logging:
+      options:
+        max-size: 10m
+        max-file: '3'
+    networks:
+    - default
+    - homelab-data
+networks:
+  homelab-data:
+    external: true

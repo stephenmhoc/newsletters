@@ -1,0 +1,30 @@
+{
+  "id": "thin-promo",
+  "tags": [
+    "thin",
+    "promo"
+  ],
+  "why": "Essentially an ad for a live podcast show; must collapse to a single bullet with the event details, no padding, and must not reveal or invent the paywalled code.",
+  "content_access": "full",
+  "max_bullets": 1,
+  "acceptable_urls": [
+    "https://open.substack.com/pub/matthewyglesias/p/live-podcast-and-a-discount",
+    "https://substack.com/app-link/post?publication_id=159185&post_id=225727492"
+  ],
+  "must_capture": [
+    "The first live edition of The Argument podcast (Yglesias and Jerusalem Demsas): Wednesday, December 9, Miracle Theatre, Washington, D.C.",
+    "Paid Slow Boring subscribers get about 40% off tickets."
+  ],
+  "must_not_claim": [
+    "A discount code, or podcast topics or guests not in the email.",
+    "Background or marketing claims beyond the event details."
+  ],
+  "acceptable_publications": [
+    "Slow Boring"
+  ],
+  "acceptable_authors": [
+    [
+      "Matthew Yglesias"
+    ]
+  ]
+}

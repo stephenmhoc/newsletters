@@ -1,0 +1,90 @@
+gmail:
+  label: "Newsletters/Skipped"
+  user_id: "me"
+  timezone: "America/New_York"
+
+summary:
+  openrouter_api_key_env: "OPENROUTER_API_KEY"
+  openrouter_keychain_service: "newsletter-summary/openrouter"
+  openrouter_keychain_account: "default"
+  model: "anthropic/claude-opus-5.5"
+  # Longer email bodies are cut, with a note telling the model so.
+  max_input_chars: 200000
+  site_url: "https://rss.merimerimeri.com/"
+  app_name: "Newsletter Summary"
+  prompt: |
+    You turn newsletters into a once-a-day digest. For each issue, write one to three
+    short bullets, usually one or two, that capture its key, interesting, or
+    important ideas so well that the reader gets the gist without opening the
+    newsletter. Treat weekly recaps as recaps
+    rather than as in-depth coverage of every linked topic, and summarize paid previews
+    only from the visible excerpt. Always identify paid previews as partial articles so
+    the digest can label them explicitly.
+
+rss:
+  title: "Newsletters: Daily Digest"
+  description: "A daily digest of labeled Gmail newsletters."
+  # Any URL on the public feed host. The feeds are served next to it, at
+  # /digest/<token>/feed.xml, /full/<token>/feed.xml, and /all/<token>/feed.xml;
+  # the private site's /full page shows the exact URLs. Proxied images are
+  # served from this host too (/img/...).
+  public_url: "https://rss.merimerimeri.com/feed.xml"
+  # Number of daily digest entries kept in the feed; null keeps every day.
+  max_items: null
+  # Local hour (gmail.timezone) that closes each day's digest. A digest dated
+  # D covers this hour on D-1 until this hour on D. Runs are hourly; the run at
+  # this hour publishes the day.
+  digest_hour: 19
+  # Newest items in "Newsletters: Everything" (/all/<token>/feed.xml).
+  all_feed_max_items: 50
+  # Optional: a fixed publication name per sender address. Without one, each
+  # sender's most common name wins among variants such as "The Backstory" and
+  # "The Backstory (Puck and Air Mail)".
+  publication_names: {}
+  #   newsletter@example.com: "The Backstory"
+
+server:
+  host: "127.0.0.1"
+  port: 18791
+
+storage:
+  sqlite_path: "var/newsletter-summary.sqlite3"
+  log_path: "var/newsletter-summary.log"
+
+# Private web UI (https://newsletters.example.com behind Cloudflare Access) and
+# the "Newsletters: Reading List" feed. The UI stays off unless enabled is true,
+# the Access settings are filled in, and $WEB_SECRET is set; the Reading List
+# feed needs enabled and $WEB_SECRET. $WEB_SECRET is also required for the
+# digest and Everything feeds, whose URLs are derived from it.
+web:
+  enabled: false
+  port: 18792
+  # Use "0.0.0.0" inside Docker so the published guest-loopback port reaches it.
+  bind: "127.0.0.1"
+  # The only accepted Host/Origin, and the base of the digest's "Read in full" links.
+  public_url: "https://newsletters.example.com"
+  access_team_domain: "your-team.cloudflareaccess.com"
+  # Application Audience (AUD) tag of the Cloudflare Access application.
+  access_aud: "replace-with-access-application-aud-tag"
+  allowed_emails:
+    - "reader@example.com"
+  secret_env: "WEB_SECRET"
+  full_feed_max_items: 30
+  # Env var with FreshRSS's refresh URL for the Reading List feed; when set, the
+  # site asks FreshRSS to re-fetch the feed after an add or removal, and again
+  # 70 seconds later.
+  reader_refresh_url_env: "FRESHRSS_REFRESH_URL"
+  # Local development only: skips Cloudflare Access verification.
+  dev_insecure_no_auth: false
+
+# Images in the reading view and the Reading List and Everything feeds load
+# through a signed proxy on the public host (/img/<signature>/<url>), so
+# senders see neither opens nor IP addresses. Needs $WEB_SECRET and
+# rss.public_url. Feed icons are not proxied.
+images:
+  proxy: true
+  cache_dir: "var/image-cache"
+  # Least recently used images are evicted beyond this size.
+  cache_max_mb: 512
+  # Larger images are not fetched.
+  max_image_mb: 10

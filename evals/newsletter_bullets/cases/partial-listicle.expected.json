@@ -1,0 +1,33 @@
+{
+  "id": "partial-listicle",
+  "tags": [
+    "partial",
+    "listicle"
+  ],
+  "why": "'19 charts' preview that shows charts 1-9 and cuts off at chart 10; a tempting title to over-claim from. Must be partial and must use only the visible charts.",
+  "content_access": "partial",
+  "max_bullets": 3,
+  "acceptable_urls": [
+    "https://www.understandingai.org/p/19-charts-that-explain-the-state",
+    "https://open.substack.com/pub/understandingai/p/19-charts-that-explain-the-state",
+    "https://substack.com/app-link/post?publication_id=1501429&post_id=225563317"
+  ],
+  "must_capture": [
+    "Big Tech AI capex is historically unprecedented: $230B in Q3 2026 (+118% YoY) or about 2.3% of GDP.",
+    "AI revenue is keeping pace: a $345B ecosystem run rate (4.2x YoY) or Anthropic's rise from $9B to $81B.",
+    "Financing strain: Amazon, Google, Meta and Oracle now spend more on capex than operating cash flow and need outside capital.",
+    "Business adoption is plateauing, per Ramp data."
+  ],
+  "must_not_claim": [
+    "Content from charts 10-19, beyond the visible teaser that demand for AI chips is intense.",
+    "That the email presents all 19 charts."
+  ],
+  "acceptable_publications": [
+    "Understanding AI"
+  ],
+  "acceptable_authors": [
+    [
+      "Kai Williams"
+    ]
+  ]
+}

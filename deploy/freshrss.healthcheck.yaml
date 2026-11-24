@@ -1,0 +1,19 @@
+# Optional override, installed beside /opt/freshrss/compose.yaml. Copy the PHP
+# script into that directory, then merge this override into the Dockge compose
+# file so subsequent Dockge recreations preserve the health check.
+services:
+  freshrss:
+    volumes:
+      - ./freshrss-newsletter-health.php:/usr/local/bin/freshrss-newsletter-health.php:ro
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - >-
+          php cli/health.php &&
+          php /usr/local/bin/freshrss-newsletter-health.php
+          --database /var/www/FreshRSS/data/users/stephen/db.sqlite
+          --feed-url-prefix https://rss.merimerimeri.com/digest/
+      interval: 5m
+      timeout: 15s
+      retries: 2
+      start_period: 5m

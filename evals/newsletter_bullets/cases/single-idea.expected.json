@@ -1,0 +1,30 @@
+{
+  "id": "single-idea",
+  "tags": [
+    "single-idea",
+    "full"
+  ],
+  "why": "A complete, short post with one idea; must say it in one or two bullets without padding or the program promo at the top.",
+  "content_access": "full",
+  "max_bullets": 2,
+  "acceptable_urls": [
+    "https://redacted.invalid/link-7"
+  ],
+  "acceptable_publications": [
+    "Tacklebox"
+  ],
+  "acceptable_authors": [
+    [
+      "Brian"
+    ],
+    []
+  ],
+  "must_capture": [
+    "Because AI has flooded inboxes with cold outreach, marketing copy now has to win on specificity: concrete detail builds trust and stands out (the 'Especially Earl' joke).",
+    "Be specific about the customer's Momentum (what they already do to solve the problem) and Quirk (the constraint that makes common solutions useless), not about your solution."
+  ],
+  "must_not_claim": [
+    "The Tacklebox Membership program or any promotion.",
+    "A second bullet that restates the first or adds claims not in the email."
+  ]
+}

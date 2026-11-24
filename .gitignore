@@ -1,0 +1,17 @@
+.DS_Store
+.venv/
+.ruff_cache/
+__pycache__/
+*.py[cod]
+
+.env
+config.yaml
+config.vm.yaml
+secrets/
+var/
+
+# Local eval run output (traces, reports)
+.claude/hillclimb/
+
+# Machine-specific notes (hosts, IPs, access); never published
+docs/local/

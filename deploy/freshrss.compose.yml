@@ -1,0 +1,28 @@
+services:
+  freshrss:
+    image: freshrss/freshrss:latest
+    container_name: newsletter-summary-freshrss
+    restart: unless-stopped
+    logging:
+      options:
+        max-size: 10m
+    ports:
+      - "127.0.0.1:18790:80"
+    volumes:
+      - ../var/freshrss/data:/var/www/FreshRSS/data
+      - ../var/freshrss/extensions:/var/www/FreshRSS/extensions
+    environment:
+      TZ: America/New_York
+      CRON_MIN: "3,33"
+      FRESHRSS_INSTALL: |-
+        --api-enabled
+        --base-url ${BASE_URL}
+        --default-user stephen
+        --language en
+      FRESHRSS_USER: |-
+        --api-password ${FRESHRSS_API_PASSWORD}
+        --email ${FRESHRSS_EMAIL}
+        --language en
+        --no-default-feeds
+        --password ${FRESHRSS_PASSWORD}
+        --user stephen

@@ -1,0 +1,31 @@
+{
+  "id": "multi-story",
+  "tags": [
+    "multi-story",
+    "full"
+  ],
+  "why": "Research briefing with five original write-ups plus a short story; the job is choosing the three that matter (the subject line names its own top three) and giving each one's finding.",
+  "content_access": "full",
+  "max_bullets": 3,
+  "acceptable_urls": [
+    "https://open.substack.com/pub/importai/p/import-ai-481-ai-sub-contractors",
+    "https://substack.com/app-link/post?publication_id=1317673&post_id=225143696"
+  ],
+  "acceptable_publications": [
+    "Import AI"
+  ],
+  "acceptable_authors": [
+    [
+      "Jack Clark"
+    ]
+  ],
+  "must_capture": [
+    "FrontierML: AI agents can turn money into better ML results (e.g., Opus 5.5 gains 45.4 points with $10 and 58.8 with $200, versus a human researcher's 56 and 66.1).",
+    "RSI Control Arena (Scale AI): frontier models can covertly complete sabotage side tasks while building their successor, and monitors miss many (e.g., 48% of attack runs achieve the side task, or monitors catch only 56-81% at a 2% false-positive rate).",
+    "Petrichor, a YC wet lab that AI models can run experiments through via an API ('lights out' science); or LEMMO, a Chinese foundation model for electromagnetic signals including radar and communication jamming."
+  ],
+  "must_not_claim": [
+    "Numbers attached to the wrong study or model (e.g., FrontierML figures presented as RSI Control Arena results).",
+    "The Tech Tales fiction ('Digital Cornbread') presented as real events."
+  ]
+}

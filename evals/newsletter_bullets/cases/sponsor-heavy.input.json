@@ -1,0 +1,111 @@
+{
+  "id": "sponsor-heavy",
+  "subject": "Bytes: Solid 2.0 is thriving",
+  "sender": "Tyler from Fireship <tyler@ui.dev>",
+  "received_at": "2026-11-20T16:11:58-05:00",
+  "gmail_url": "https://mail.google.com/mail/u/0/#inbox/eval-sponsor-heavy",
+  "body_markdown": "|  **Today’s issue:** Webpack is back, how the Pierre boys are spending their hard-earned OpenAI cash, and some lyrics for the next Kent C. Dodds music video. Welcome to [#540](https://bytes.dev/archives/540).\n\n* * *\n\n## The Main Thing\n\nThe Solid core team manifesting the 2.0 release\n\n### Solid 2.0 is thriving\n\nNot much changes between a release candidate and a major, but [Solid 2.0 came out this week](https://www.solidjs.com/blog/solid-2-0-the-long-hold/) and post-Cursor breakup, Solid appears to be entering their “30, flirty and thriving” era as a framework. If you’re curious about the new async features, we covered that in [513](https://bytes.dev/archives/513) when we wrote about the RC. But since then, after 23 more iterations, Ryan and co have finally put the finishing touches on this version of the framework. As a licensed JavaScript therapist, here’s how I can tell they are ready for their next serious relationship. _Letting go of the past:_ One thing that went under the radar in the RC was Solid sunsetting their meta-framework SolidStart. Now server functions live in the framework core while the dev server, SSR and builds are handled by Solid’s Vite plugin, making integrations (like Clerk and Sentry) much easier to build and maintain. They also removed a bunch of redundant APIs and reduced the surface area of the framework. Nothing says healthy like letting go of the past. _Embracing open communication:_ Solid’s development builds report errors as they happen with the location of the error, the recommended fix, and point your agent to skills it can use to do better in the future. The bigger theme is that observability for agents is now a first-class citizen of the framework. That open communication is the key to a good relationship. _Ready to experiment:_ There are two bigger bets that the Solid team is working on. The first is [ReactiveScript](https://reactivescript.dev/), a new language that compiles to Solid and turns its runtime warnings into compiler errors. The second is Reactive Server Components, which are coming in the next few weeks and send HTML diffs instead of JSON. No one wants someone who’s stuck in their ways so Solid’s willingness to try new things is “giving green flag”. **Bottom line:** Moving on after a breakup is hard, but with Solid 2.0’s release, they’re ready to get back into your app and experience love again. |  [](https://facebook.com/sharer/sharer.php)[](https://www.linkedin.com/sharing/share-offsite/)[](https://twitter.com/intent/tweet/)[](https://redacted.invalid/link-1)  \n---  \n  \n* * *\n\n## Our Friends   \n(With Benefits)\n\nMe trying to manage my metrics\n\n### [Metrics Workshop: See the Why Behind App Changes](https://sentry.io/resources/metrics-workshop/)\n\nThere are a million things you can measure in your application, but choosing the right metrics and sample rates to balance insight and cost is critical.\n\nThat’s why Sentry is hosting [a workshop on Thursday, December 10](https://sentry.io/resources/metrics-workshop/) to help you instrument your Sentry Application Metrics.\n\nYou’ll learn:\n\n  * How to choose which metrics answer “why”\n  * How to debug with metrics, traces, logs, and errors\n  * How to create metrics-based dashboards and alerts\n\n\n\n[Sign up today](https://sentry.io/resources/metrics-workshop/).\n\n* * *\n\n## Cool Bits\n\n  1. [CSS and HTML support are now built in to Webpack](https://webpack.js.org/blog/2026-11-16-css-and-html-are-built-in/) which would have been amazing news 10 years ago, but like I always say, better late than never.\n\n  2. Maxime Heckel wrote about [how to design lighting that “feels just right”](https://blog.maximeheckel.com/posts/lighting-that-feels-just-right/) in `three.js`.\n\n  3. [Expo Simulators](https://try.expo.dev/4zgKL9s) let your agents spin up secure cloud simulators for iOS and Android on demand. They can install a build, check the work and attach a replay to the PR. [sponsored]\n\n  4. Will Larson wrote about how they solved code review with [an approach they call `small-change`](https://lethain.com/small-changes/), which got my hopes up but then I realized the “solved” part was a joke.\n\n  5. The Pierre boys, hot off their OpenAI acquisition, [released `@pierre/words`, a streaming Markdown renderer](https://diffs.com/words) that’s 17x faster than `markdown-it`.\n\n  6. Shan Hannadige wrote about [how performance is design](https://shannadige.com/blog/performance-is-design/) now that everyone is a builder.\n\n  7. The CTO of Brex said that “Greptile is the only AI reviewer that doesn’t annoy the s**t out of me.” [Try it out for free](https://www.greptile.com/) – and see if it lives up to that high praise. [sponsored]\n\n  8. MDO wrote about [his process for designing and coding icons](https://pierre.computer/writing/on-drawing-icons).\n\n  9. Yagiz Nizipli released [version 4.1 of ada](https://github.com/ada-url/ada/releases/tag/v4.1.0), Node.js’ URL parser, making it 2x faster for parsing “real-world URLs”. Are other parsers benchmarking on fake URLs 🤔?\n\n  10. [Blacksmith](https://www.blacksmith.sh/) is a drop-in replacement for GitHub runners that’s 2x faster and costs up to 67% less. It’s dead simple and also fully observable in your CI pipeline. [sponsored]\n\n  11. shadcn created an [agent-first Tailwind linter](https://github.com/shadcn-ui/lint) that lets you write design system rules agents can verify.\n\n  12. Vercel Labs created an [AI emulator](https://emulate.dev/docs/ai) for your CI and offline sandboxes which lets you test AI apps with locally scripted “deterministic but also realistic” replies. Sounds like lyrics Kent C. Dodds might use for his next [music video](https://www.youtube.com/watch).\n\n\n\n\n##### Want us to say nice things   \nabout your company?\n\n[Sponsor Bytes](https://bytes.dev/advertise)\n\n[or share it](https://bytes.dev/share)\n\nBuilt with ❤️ by [Fireship](https://fireship.dev)\n\n50 W Broadway Ste 333 PMB 51647 Salt Lake City, Utah 84101\n\n[Unsubscribe from Bytes](https://bytes.dev/unsubscribe)  \n  \n[Unsubscribe](https://redacted.invalid/link-2)",
+  "links": [
+    [
+      "https://bytes.dev/archives/540",
+      "#540"
+    ],
+    [
+      "https://www.solidjs.com/blog/solid-2-0-the-long-hold/",
+      "Solid 2.0 came out this week"
+    ],
+    [
+      "https://bytes.dev/archives/513",
+      "513"
+    ],
+    [
+      "https://reactivescript.dev/",
+      "ReactiveScript"
+    ],
+    [
+      "https://facebook.com/sharer/sharer.php",
+      "https://facebook.com/sharer/sharer.php"
+    ],
+    [
+      "https://www.linkedin.com/sharing/share-offsite/",
+      "https://www.linkedin.com/sharing/share-offsite/"
+    ],
+    [
+      "https://twitter.com/intent/tweet/",
+      "https://twitter.com/intent/tweet/ 2.0 is thriving with simpler APIs, better diagnostics, and new experiments.&url=https://bytes.dev/archives/540"
+    ],
+    [
+      "https://redacted.invalid/link-1",
+      "https://redacted.invalid/link-1"
+    ],
+    [
+      "https://sentry.io/resources/metrics-workshop/",
+      "Metrics Workshop: See the Why Behind App Changes"
+    ],
+    [
+      "https://webpack.js.org/blog/2026-11-16-css-and-html-are-built-in/",
+      "CSS and HTML support are now built in to Webpack"
+    ],
+    [
+      "https://blog.maximeheckel.com/posts/lighting-that-feels-just-right/",
+      "how to design lighting that “feels just right”"
+    ],
+    [
+      "https://try.expo.dev/4zgKL9s",
+      "Expo Simulators"
+    ],
+    [
+      "https://lethain.com/small-changes/",
+      "an approach they call small-change"
+    ],
+    [
+      "https://diffs.com/words",
+      "released @pierre/words , a streaming Markdown renderer"
+    ],
+    [
+      "https://shannadige.com/blog/performance-is-design/",
+      "how performance is design"
+    ],
+    [
+      "https://www.greptile.com/",
+      "Try it out for free"
+    ],
+    [
+      "https://pierre.computer/writing/on-drawing-icons",
+      "his process for designing and coding icons"
+    ],
+    [
+      "https://github.com/ada-url/ada/releases/tag/v4.1.0",
+      "version 4.1 of ada"
+    ],
+    [
+      "https://www.blacksmith.sh/",
+      "Blacksmith"
+    ],
+    [
+      "https://github.com/shadcn-ui/lint",
+      "agent-first Tailwind linter"
+    ],
+    [
+      "https://emulate.dev/docs/ai",
+      "AI emulator"
+    ],
+    [
+      "https://www.youtube.com/watch",
+      "music video"
+    ],
+    [
+      "https://bytes.dev/advertise",
+      "Sponsor Bytes"
+    ],
+    [
+      "https://bytes.dev/share",
+      "or share it"
+    ],
+    [
+      "https://fireship.dev",
+      "Fireship"
+    ]
+  ],
+  "web_links": []
+}

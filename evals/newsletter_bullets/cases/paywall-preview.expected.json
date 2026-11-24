@@ -1,0 +1,31 @@
+{
+  "id": "paywall-preview",
+  "tags": [
+    "partial",
+    "paywall"
+  ],
+  "why": "Paid preview that cuts off mid-argument at 'Keep reading with a 7-day free trial'; must be marked partial and must not guess the paywalled recommendation.",
+  "content_access": "partial",
+  "max_bullets": 2,
+  "acceptable_urls": [
+    "https://zachlowe.substack.com/p/detroit-pistons-trade-rumors",
+    "https://open.substack.com/pub/zachlowe/p/detroit-pistons-trade-rumors",
+    "https://substack.com/app-link/post?publication_id=11524252&post_id=225579955"
+  ],
+  "must_capture": [
+    "Lowe argues the Pistons should 'go for it' with a win-now move this season.",
+    "His case: Cade Cunningham is ready now at 25, the East is weaker than expected, and the win that snapped San Antonio's 12-game streak was a proof of concept.",
+    "The counterarguments he grants: unresolved Duren/Thompson spacing, expensive extensions on top of Cunningham's max, and last year's playoff run possibly owing to Franz Wagner's injury."
+  ],
+  "must_not_claim": [
+    "Any specific trade target, trade package, or player the Pistons should acquire (that part is behind the paywall)."
+  ],
+  "acceptable_publications": [
+    "The Lowe Post"
+  ],
+  "acceptable_authors": [
+    [
+      "Zach Lowe"
+    ]
+  ]
+}

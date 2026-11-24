@@ -1,0 +1,30 @@
+{
+  "id": "dense-essay",
+  "tags": [
+    "dense-essay",
+    "full"
+  ],
+  "why": "6.3k-word interview essay; must pick the load-bearing arguments (in at most 2 bullets), not the anecdote it opens with.",
+  "content_access": "full",
+  "max_bullets": 2,
+  "acceptable_urls": [
+    "https://open.substack.com/pub/derekthompson/p/why-everything-is-suddenly-breaking-58c",
+    "https://substack.com/app-link/post?publication_id=2880588&post_id=225684445"
+  ],
+  "must_capture": [
+    "The recent outages (FAA ground stop, bank withdrawal failures, United, NSA) were mostly self-inflicted: organizations rushing untested patches for AI-discovered vulnerabilities, not cyberattacks.",
+    "AI is accelerating offense: about 3x more vulnerabilities found than last year or discovery-to-exploit time down to about a day, and push-button tools like ARTEX hand attack capability to unskilled actors.",
+    "Pahlka: more money (e.g., the $50B air-traffic-control request) won't fix government tech, because the problem is outsourced expertise and contracting-driven procurement; government needs in-house technical expertise."
+  ],
+  "must_not_claim": [
+    "That the outages were caused by a coordinated AI cyberattack."
+  ],
+  "acceptable_publications": [
+    "Derek Thompson"
+  ],
+  "acceptable_authors": [
+    [
+      "Derek Thompson"
+    ]
+  ]
+}
